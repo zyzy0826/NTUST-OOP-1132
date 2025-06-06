@@ -35,13 +35,15 @@ public:
     Complex operator-(double c) const;
     Complex operator*(double c) const;
     Complex operator/(double c) const;
+    bool operator==(Complex c) const;
     friend Complex operator+(double d, Complex c);
     friend Complex operator-(double d, Complex c);
     friend Complex operator*(double d, Complex c);
     friend Complex operator/(double d, Complex c);
-    friend bool operator==(Complex c1, Complex c2);
     friend ostream& operator<<(ostream& strm, const Complex& c);
     friend istream& operator>>(istream& strm, Complex& c);
 };
+
+
 
 #endif // COMPLEX_H

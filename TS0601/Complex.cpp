@@ -46,6 +46,10 @@ Complex Complex::operator/(const double c) const {
     return (*this) / Complex(c);
 }
 
+bool Complex::operator==(const Complex c) const {
+    return this->realValue == c.realValue && this->imaginaryValue == c.imaginaryValue;
+}
+
 double real(const Complex c) {
     return c.realValue;
 }
@@ -72,10 +76,6 @@ Complex operator*(const double d, const Complex c) {
 
 Complex operator/(const double d, const Complex c) {
     return Complex(d) / c;
-}
-
-bool operator==(const Complex c1, const Complex c2) {
-    return c1.realValue == c2.realValue && c1.imaginaryValue == c2.imaginaryValue;
 }
 
 ostream& operator<<(ostream& strm, const Complex& c) {
